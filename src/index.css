@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Quicksand", sans-serif;
+  background: radial-gradient(#186a5e, #053339);
+  color: #e1eeeb;
+  min-height: 100vh;
 }
+/* Header */
+
+.header_Container {
+  max-width: 60rem;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: #000000;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.header h1 {
+  font-family: "Handjet", sans-serif;
+  font-size: 4rem;
+}
+.header p {
+  font-size: 1.4rem;
+}
+
+.header h1 span {
+  color: aqua;
+}
+
+/* header */
+
+/* <player> */
+
+.player_container {
+  margin: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.player_container h2 {
+  color: #068975;
+}
+
+.player_container .inputBox input {
+  padding: 5px 10px;
+  background-color: #034f4a0e;
+  border: 2px solid #068975;
+  border-radius: 5px 0px 0px 5px;
+  color:#0abea3;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  
+}
+.inputBox{
+   display: flex;
+   align-items: center;
+   
+}
+.player_container .inputBox button {
+  padding: 6px;
+  background-color: #068975;
+  border-radius: 0px 5px 5px 0px;
+  border: 3px solid #068975;
+}
+
+/* <player/> */
