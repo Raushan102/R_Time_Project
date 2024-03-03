@@ -54,16 +54,14 @@ body {
   background-color: #034f4a0e;
   border: 2px solid #068975;
   border-radius: 5px 0px 0px 5px;
-  color:#0abea3;
+  color: #0abea3;
   font-weight: bold;
   font-size: 1rem;
   font-family: "Quicksand", sans-serif;
-  
 }
-.inputBox{
-   display: flex;
-   align-items: center;
-   
+.inputBox {
+  display: flex;
+  align-items: center;
 }
 .player_container .inputBox button {
   padding: 6px;
@@ -73,3 +71,68 @@ body {
 }
 
 /* <player/> */
+
+/* challenge  */
+.challenge_main_container{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+
+}
+.challenge {
+  width: 18rem;
+  height: 18rem;
+  background: rgb(39, 127, 113);
+  background: linear-gradient(
+    180deg,
+    rgb(0, 252, 237) 40%,
+    rgb(0, 251, 255) 50%
+  );
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 15px;
+  color: #000000;
+  
+}
+.challenge_time {
+  height: 20px;
+  width: 4.8rem;
+  border: 1px solid rgb(197, 194, 194);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px black;
+  border: none;
+  margin-bottom: 20px;
+  
+}
+.challenge .Challenge_title{
+  letter-spacing: 4px;
+}
+.challenge button{
+  padding: 3px 20px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  font-size: small;
+  font-family: "Quicksand", sans-serif;
+}
+.challenge_paragraph {
+ 
+  font-weight: 700;
+  font-size: small;
+}
+
+/* challenge */
