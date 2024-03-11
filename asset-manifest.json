@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/R_Time_Project/static/css/main.8034cae3.css",
+    "main.js": "/R_Time_Project/static/js/main.90e3fec4.js",
+    "static/js/453.6e1bebae.chunk.js": "/R_Time_Project/static/js/453.6e1bebae.chunk.js",
+    "index.html": "/R_Time_Project/index.html",
+    "main.8034cae3.css.map": "/R_Time_Project/static/css/main.8034cae3.css.map",
+    "main.90e3fec4.js.map": "/R_Time_Project/static/js/main.90e3fec4.js.map",
+    "453.6e1bebae.chunk.js.map": "/R_Time_Project/static/js/453.6e1bebae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8034cae3.css",
+    "static/js/main.90e3fec4.js"
+  ]
+}
