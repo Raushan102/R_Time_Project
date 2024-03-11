@@ -1,4 +1,5 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
+import {createPortal} from 'react-dom';
 
 const ResultModel = forwardRef(function ResultModel( { challenge_time, Result,Reset,timeRemaining }, ref) {
   let dialog = useRef();
@@ -6,21 +7,25 @@ const ResultModel = forwardRef(function ResultModel( { challenge_time, Result,Re
   timeRemaining=(timeRemaining/1000).toFixed(2);
 
   let useLost=timeRemaining<=0;
-  let Score=(1-timeRemaining/challenge_time)*100
+  let Score=Math.round((1-timeRemaining/challenge_time)*100)
 
-  useImperativeHandle(ref, () => {
+  useImperativeHandle(ref, () => {  //  use imprativeHandler is use to make multiple connection between the two components
     return {
-      open() {
+      showModal() {
         dialog.current.showModal();
       },
+     
     };
   });
 
-  return(
-   <dialog ref={dialog}>
+
+// below i use dialog element that is use to display pop-up  it is a spacial element that is use to display pop-up because it comes with many inbuilt attribute
+// that male it more flexible to use like Open() showModel() this is show() this a  method that is use to display the pop-up
+  return createPortal(
+   <dialog ref={dialog} className="dialog">   
      {useLost ? (
        <>
-         <h2>you {Result}</h2>
+         <h2 className="main_result">you {Result}</h2>
          <p>
            the target time is <strong>{challenge_time} seconds</strong>
          </p>
@@ -30,7 +35,8 @@ const ResultModel = forwardRef(function ResultModel( { challenge_time, Result,Re
        </>
      ) : (
        <>
-         <p>your score is {Score} %</p>
+         <p className="main_result">your score is <strong>{Score} %</strong></p>
+
          <p>
            the target time is <strong>{challenge_time} seconds</strong>
          </p>
@@ -43,7 +49,8 @@ const ResultModel = forwardRef(function ResultModel( { challenge_time, Result,Re
      <form method="dialog" onSubmit={Reset}>
        <button>close</button>
      </form>
-   </dialog>
+   </dialog>,
+   document.getElementById('model')
  );
 });
 

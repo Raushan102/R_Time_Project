@@ -1,20 +1,20 @@
-import { useState, useRef } from "react";
+import { useState, useRef } from "react"; // import useState and useRef  and destructure 
 
 export default function Player() {
-  const [playerName, setPlayerName] = useState(null);
+  const [playerName, setPlayerName] = useState(null); // this is a state  that is use to set the name of the user
 
-  let nameRef = useRef("");
+  let nameRef = useRef("");//creating Ref variable 
 
   function HandlerName() {
 
 
-    if(nameRef.current.value !== "")
+    if(nameRef.current.value !== "")  // check weather input field in empty or not 
     {
-        setPlayerName(nameRef.current.value)
+        setPlayerName(nameRef.current.value)// assign name is state variable
     }
-    nameRef.current.value=''
+    nameRef.current.value='' // here he clear the input field
   }
-  console.log(typeof playerName );
+ 
 
   return (
     <div className="player_container">

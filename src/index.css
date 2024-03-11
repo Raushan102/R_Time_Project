@@ -136,3 +136,57 @@ body {
 }
 
 /* challenge */
+
+/* challenge_components */
+dialog
+{
+  
+  background: rgb(39, 127, 113);
+  background: linear-gradient(
+    180deg,
+    rgb(0, 252, 237) 40%,
+    rgb(0, 251, 255) 50%
+  );
+  padding: 3rem;
+  margin: 10px;
+  border-radius: 10px;
+  line-height: 30px;
+  align-self: center;
+  justify-self: center;
+  border: none;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  
+}
+dialog button{
+  padding: 3px 20px;
+  margin: 10px 0px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  font-size: small;
+  font-family: "Quicksand", sans-serif;
+  
+}
+dialog button:hover{
+  border: 3px solid white;
+  inset: 1rem;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.759); /* Semi-transparent black */
+ }
+
+ .main_result{
+  font-family: "Handjet", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+ }
+
+ dialog strong{
+  color: rgb(251, 15, 15);
+ }
+
+
+
+/* challenge_components */
+
